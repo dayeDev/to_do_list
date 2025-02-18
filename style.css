@@ -1,0 +1,47 @@
+body{
+  margin:0;
+  background-image: url("image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.container{
+  background-color:white;
+  min-height: 100vh;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+
+.task-area{
+  border:3px solid lightgray;
+  margin-top: 2em;
+}
+
+
+.task-tabs{
+  display: flex;
+  border-bottom:3px solid lightgray;
+  position:relative;
+}
+
+/* 탭: 언더라인, 모두 진행중 끝남 */
+.task-tabs div{
+  padding:1em;
+}
+
+/* 언더라인 */
+#under-line{
+  height: 4px;
+  background-color: pink;
+  position:absolute;
+  width: 70px;
+  left:0px;
+  top:50px;
+  padding:0px;
+}
+
+/* 목록, 추가 삭제 버튼 */
+.task{
+  display:flex;
+  justify-content: space-between;
+  padding: 1em;
+}
