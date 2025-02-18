@@ -11,21 +11,22 @@ body{
   box-shadow: 5px 5px 5px 5px gray;
 }
 
+/* 목록 박스*/
 .task-area{
   border:3px solid lightgray;
   margin-top: 2em;
 }
 
-
+/* 언더라인 영역 선*/
 .task-tabs{
   display: flex;
   border-bottom:3px solid lightgray;
   position:relative;
 }
 
-/* 탭: 언더라인, 모두 진행중 끝남 */
+/* 탭 안의 요소 */
 .task-tabs div{
-  padding:1em;
+  padding:0.5em;
 }
 
 /* 언더라인 */
@@ -33,9 +34,9 @@ body{
   height: 4px;
   background-color: pink;
   position:absolute;
-  width: 70px;
+  width: 50px;
   left:0px;
-  top:50px;
+  top:38px;
   padding:0px;
 }
 
