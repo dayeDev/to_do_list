@@ -31,19 +31,21 @@ function render(){
   let resultHTML = "";
   for(let i = 0; i < taskList.length; i++){
     if(taskList[i].isComplete == true){
-      resultHTML += `<div class="task">
+      // 완료된 항목
+      resultHTML += `<div class="task-completed task">
         <div class="task-done">${taskList[i].taskContent}</div>
         <div>
-            <button onclick="toggleComplete('${taskList[i].id}')">Undo</button>
-            <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
+            <button onclick="toggleComplete('${taskList[i].id}')"><i class="bi bi-arrow-counterclockwise"></i></i></button>
+            <button onclick="deleteTask('${taskList[i].id}')"><i class="bi bi-trash"></i></button>
         </div>
       </div>`;
     } else {
+      // 미완료 항목
       resultHTML += `<div class="task">
         <div>${taskList[i].taskContent}</div>
         <div>
-          <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-          <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
+          <button onclick="toggleComplete('${taskList[i].id}')"> <i class="bi bi-check2-circle"></i></button>
+          <button onclick="deleteTask('${taskList[i].id}')"><i class="bi bi-trash"></i></button>
         </div>
       </div>`;
     }
@@ -64,7 +66,12 @@ function toggleComplete(id){
 
 // 할 일을 삭제하는 함수
 function deleteTask(id){
-  taskList = taskList.filter(task => task.id !== id);  // 해당 ID의 할 일을 제외
+  for(let i=0; i<taskList.length; i++){
+    if(taskList[i].id == id){
+      taskList.splice(i,1)  // // 해당 인덱스에서 할 일 삭제
+      break;
+    }
+  }
   render();
 }
 

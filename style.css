@@ -47,6 +47,13 @@ body{
   padding: 1em;
 }
 
+/* 완료된 항목 삭선 */
 .task-done{
   text-decoration: line-through;
 }
+
+/* 완료된 항목(= .completed) 배경색 지정 */
+.task-completed {
+  background-color: #f1f1f1;  /* 원하는 색상으로 변경하세요 */
+}
+
