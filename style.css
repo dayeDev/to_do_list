@@ -27,6 +27,8 @@ body{
 /* 탭 안의 요소 */
 .task-tabs div{
   padding:0.5em;
+  cursor:pointer;
+  text-align: center;
 }
 
 /* 언더라인 */
@@ -56,4 +58,5 @@ body{
 .task-completed {
   background-color: #f1f1f1;  /* 원하는 색상으로 변경하세요 */
 }
+
 
